@@ -20,29 +20,6 @@ class Net(torch.nn.Module):
         x = self.fc2(x)
         return F.log_softmax(x,dim=1)
 
-# class KaoSet:
-#     cap_channel         = 0
-#     WINDOW_WIDTH        = 1920
-#     WINDOW_HEIGHT       = 1080
-#     FRAME_WIDTH         = 500
-#     FRAME_HEIGHT        = 500
-#     color               = (255,0,255)
-
-#     def show(self):
-#         cap = cv2.VideoCapture(self.cap_channel)
-#         cap.set(cv2.CAP_PROP_FRAME_WIDTH,   self.WINDOW_WIDTH)
-#         cap.set(cv2.CAP_PROP_FRAME_HEIGHT,  self.WINDOW_HEIGHT)
-#         x   = 100
-#         y   = 100
-#         while True:
-#             success,img = cap.read()
-#             cv2.rectangle(img,(x,y),(x+self.FRAME_WIDTH,y+self.FRAME_HEIGHT),self.color,thickness=10)
-#             cv2.imshow("Image",img)
-#             H,W,C = img.shape
-#             x = int((W - self.FRAME_WIDTH)/2)
-#             y = int((H - self.FRAME_HEIGHT)/2)
-#             cv2.waitKey(100)
-
 class Suiron:
     CAP_CHANNEL         =   0     #   0か1にしてください
     IS_CAP_INIT         =   0
